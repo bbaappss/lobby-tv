@@ -1,12 +1,17 @@
-(function() {
+var tl = gsap.timeline({
+  repeat: -1,
+  repeatDelay: 5
+});
 
-  var menuTrigger = Trigger.init({
-    trigger: '.menu-trigger',
-    bodyClass: 'menu-activated'
-  });
+tl.from(".logo", {
+  opacity: 0,
+  duration: 1,
+  x: -100,
+});
 
-  Lantern.init();
-
-  Sail.init();
-
-})();
+tl.to(".logo", {
+  opacity: 0,
+  duration: 1,
+  delay: 20,
+  x: 100,
+});
