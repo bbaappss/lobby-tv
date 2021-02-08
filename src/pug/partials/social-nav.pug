@@ -1,0 +1,11 @@
+nav.social-nav
+  ol.social-nav-group
+    each link in siteLinks.socialNav
+      li.social-nav-item
+        a.social-nav-link(
+          href=link.href
+          itemprop="url"
+          target="_blank"
+        )
+          +icon("social-nav-icon", link.name)
+          span.social-nav-label= link.name

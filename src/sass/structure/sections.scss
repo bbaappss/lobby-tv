@@ -1,0 +1,11 @@
+/* ================
+// Sections
+// ============= */
+
+.section {
+  padding: 0 em(20);
+}
+
+.compartment {
+  @include compartment;
+}

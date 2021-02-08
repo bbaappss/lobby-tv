@@ -1,0 +1,22 @@
+/* ================
+// Grid
+// ============= */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:after {
+    @include clearfix;
+  }
+
+  &-centered {
+    align-content: center;
+    align-items: center;
+  }
+}
+
+  .column {
+    float: left;
+    width: 100%;
+  }

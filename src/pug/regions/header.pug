@@ -1,0 +1,10 @@
+header.header(role="banner")
+  +section
+    .header-ribbon
+      block header
+        a.logo(href="./")
+          span.logo-label= siteTitle
+          +icon("logo")
+        button.menu-trigger
+        .menu
+          include ../partials/main-nav.pug

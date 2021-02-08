@@ -1,0 +1,30 @@
+/* ================
+// Icons
+// ============= */
+
+.icon {
+  display: block;
+  fill: currentColor;
+  transition:
+    fill .25s,
+    stroke .25s;
+
+  @media print {
+    display: none;
+  }
+
+  $icons: (
+    (logo, 100, 150),
+    (arrow-left, 20, 20),
+    (arrow-right, 20, 20),
+    (close, 20, 20)
+  );
+
+  @each $label, $w, $h in $icons {
+
+    &-#{$label} {
+      height: $h * 1px;
+      width: $w * 1px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* ================
+// Buttons
+// ============= */
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  margin: 0 em(10) em(10) 0;
+  padding: em(10) em(20);
+  cursor: pointer;
+  text-align: center;
+  background: #eee;
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:focus,
+  &:hover {}
+
+  &-modifier {}
+}
+
+
+/* ================
+// Skip Link
+// ============= */
+
+.skip-link {
+  @include visually-hidden;
+  display: inline-block;
+
+  &:focus {
+    @include reset-visually-hidden;
+  }
+}

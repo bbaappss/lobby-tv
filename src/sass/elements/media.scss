@@ -1,0 +1,43 @@
+/* ================
+// Common Media
+// ============= */
+
+.typography {
+
+  img,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+  }
+}
+
+
+/* ================
+// Images
+// ============= */
+
+.typography {
+
+  img {
+    display: block;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {}
+}
+
+
+/* ================
+// Iframes
+// ============= */
+
+.typography {
+
+  iframe {
+    border: 0;
+  }
+}

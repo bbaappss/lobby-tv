@@ -1,0 +1,102 @@
+@mixin reset-menu {
+  position: relative;
+  top: auto;
+  max-width: inherit;
+  min-height: inherit;
+  transition: none;
+}
+
+
+/* ================
+// Menu
+// ============= */
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  max-width: em(400);
+  min-height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-20%, 0);
+  transform: translate3d(-20%, 0, 0);
+  will-change: transform;
+  transition:
+    opacity .3s,
+    visibility .3s,
+    transform .3s;
+
+  .menu-activated & {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* ================
+// Menu Trigger
+// ============= */
+
+.menu-trigger {
+  position: relative;
+  z-index: 400;
+  height: em(50);
+  width: em(50);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  color: #000;
+
+  @media print {
+    display: none;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: rem(2);
+    width: em(20);
+    content: '';
+    background: currentColor;
+    color: inherit;
+    transform: translate(-50%, -50%);
+    transition:
+      background .25s,
+      box-shadow .25s,
+      margin .25s,
+      transform .25s;
+  }
+
+  &:before {
+    margin-top: em(-6);
+
+    .menu-activated & {
+      margin-top: 0;
+      transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+    }
+  }
+
+  &:after {
+    box-shadow: 0 em(6) 0 0 currentColor;
+
+    .menu-activated & {
+      box-shadow: 0 0 0 0 transparent;
+      transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+    }
+  }
+
+  &:focus,
+  &:hover {}
+}

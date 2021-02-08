@@ -1,0 +1,106 @@
+/* ================
+// Anchors
+// ============= */
+
+.typography {
+
+  a {
+
+    &:focus,
+    &:hover {}
+
+    &:visited {}
+  }
+}
+
+
+/* ================
+// Blockquote / Cite
+// ============= */
+
+.typography {
+    
+  blockquote {
+    margin: em(20) 0;
+
+    &:before,
+    &:after {
+      speak: none;
+    }
+
+    &:before {
+      content: '\201C';
+    }
+
+    &:after {
+      content: '\201D';
+    }
+  }
+
+  cite {
+    font-style: normal;
+
+    &:before {
+      content: '';
+      speak: none;
+    }
+  }
+}
+
+
+/* ================
+// Lists
+// ============= */
+
+.typography {
+
+  ul,
+  ol {}
+
+    li {}
+}
+
+
+/* ================
+// Paragraphs
+// ============= */
+
+.typography {
+
+  p {
+    margin: em(20) 0;
+  }
+}
+
+
+/* ================
+// Table
+// ============= */
+
+.typography {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: em(20) 0;
+  }
+
+  tr {
+    vertical-align: top;
+
+    &:nth-of-type(even) {
+      background: rgba(0, 0, 0, .05);
+    }
+  }
+
+  th {
+    padding: em(20) rem(20);
+    font-weight: normal;
+    text-align: left;
+    background: rgba(0, 0, 0, .15);
+  }
+
+  td {
+    padding: em(20) rem(20);
+  }
+}
