@@ -34,6 +34,15 @@
 // ::::::::::::: */
 
 @import 'components/*';
+html,
+body,
+#main {
+    height: 100%;
+}
+
+#main {
+    display: flex;
+}
 
 .container {
     display: flex;

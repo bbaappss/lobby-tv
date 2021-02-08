@@ -898,6 +898,14 @@ body {
   font-weight: inherit;
   background-color: #ddd; }
 
+html,
+body,
+#main {
+  height: 100%; }
+
+#main {
+  display: flex; }
+
 .container {
   display: flex;
   width: 100%;
